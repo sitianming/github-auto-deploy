@@ -17,8 +17,8 @@ fi
 # 进入目录
 cd $ProjectPath
 
-# 取消修改
-git checkout deploy
+# 取消线上修改
+# git checkout deploy
 git clean -f
 
 # 拉取最新代码
