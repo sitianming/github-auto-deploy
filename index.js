@@ -1,8 +1,9 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
-var handler = createHandler({ path: '/webhook', secret: 'myhashsecret' })
+var handler = createHandler({ path: '/webhook-cgi', secret: 'stm' })
 
 http.createServer(function (req, res) {
+  console.log(req)
   handler(req, res, function (err) {
     res.statusCode = 404
     res.end('no such location')
