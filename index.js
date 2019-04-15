@@ -15,9 +15,9 @@ handler.on('error', function (err) {
 })
 
 handler.on('push', function (event) {
-    let {name,ref} = event.payload.repository
-    console.log('Received a push event for %s to %s', name, ref)
-    runDeployBash(name,ref)
+    let {name,ssh_url} = event.payload.repository
+    console.log('Received a push event for %s to %s', name, ssh_url)
+    runDeployBash(name,ssh_url)
 })
 
 handler.on('issues', function (event) {
