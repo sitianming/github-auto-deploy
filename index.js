@@ -30,7 +30,7 @@ handler.on('issues', function (event) {
 
 function runDeployBash(name,ref){
     let exec = require("child_process").exec
-    let cmd = `./deploy.sh ${name} ${ref}`
+    let cmd = `./call-deploy.sh ${name} ${ref}`
     exec(cmd,(error,stdout,stderr)=>{
         if(error){
             console.log(`执行出错：${cmd}`)

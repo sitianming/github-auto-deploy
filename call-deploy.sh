@@ -29,6 +29,7 @@ deployFile=$ProjectPath/deploy.sh
 if [ -f "$deployFile" ]
 then
     echo "执行deploy.sh"
+    chmod +x $deployFile
     $deployFile
 fi
 
