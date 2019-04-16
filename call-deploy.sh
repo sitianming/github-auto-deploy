@@ -10,7 +10,7 @@ ProjectPath=$WWWPath$ProjectName
 if [ ! -d $ProjectPath ]
 then
     echo "首次部署，先clone项目"
-    cd WWWPath
+    cd $WWWPath
     git clone $ProjectGit
 fi
 
